@@ -9,9 +9,9 @@ Gif breakout;
 void setup() {
   size(800, 800); 
   
-  breakout = new Gif("breakout(" ,").gif", 188, 1, width/2, height/2); 
+  breakout = new Gif("breakout(" ,").gif", 188, 2, width, height); 
 }
 
 void draw() {
-  
+  breakout.show(); 
 }
