@@ -15,7 +15,7 @@ class Gif {
     gif = new PImage [n];
 
     int i = 0;
-    if (i < n) {
+    while (i < n) {
       gif[i] = loadImage(before + i + after);
       i++;
     }
@@ -34,7 +34,7 @@ class Gif {
     imageMode(CENTER);
     if (f >= numFrames) f = 0;
     image(gif[f], x, y, w, h);
-    f++;
+    if (frameCount % speed == 0) f++;
     println(numFrames);
   }
 }
